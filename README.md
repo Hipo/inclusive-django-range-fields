@@ -1,6 +1,6 @@
 # Inclusive Django Range Fields
 
-![I love all inclusive](https://media.giphy.com/media/5YiNunQI0Wg9Mpc6Ts/giphy.gif "I love all inclusive")
+![Inclusive](https://media.giphy.com/media/xUOwGdD7RGT4CTnUaY/giphy.giff "Inclusive")
 
 ## How to use?
 
