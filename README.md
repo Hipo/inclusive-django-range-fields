@@ -20,7 +20,7 @@ class AdCampaign(models.Model):
 
 ```
 >> AdCampaign.objects.first().age_target
->> NumericRange(18, 30, '[]')
+NumericRange(18, 30, '[]')
 ```
 ### Django Rest Framework
 
