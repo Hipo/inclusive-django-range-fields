@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from inclusive_django_range_fields import ranges
+from inclusive_django_range_fields import InclusiveNumericRange, InclusiveDateRange
 
 
 class InclusiveIntegerRangeField(serializers.Field):
@@ -12,7 +12,7 @@ class InclusiveIntegerRangeField(serializers.Field):
         }
 
     def to_internal_value(self, data):
-        return ranges.InclusiveNumericRange(lower=data["lower"], upper=data["upper"])
+        return InclusiveNumericRange(lower=data["lower"], upper=data["upper"])
 
 
 class InclusiveDateRangeField(serializers.Field):
@@ -24,4 +24,4 @@ class InclusiveDateRangeField(serializers.Field):
         }
 
     def to_internal_value(self, data):
-        return ranges.InclusiveDateRange(lower=data["lower"], upper=data["upper"])
+        return InclusiveDateRange(lower=data["lower"], upper=data["upper"])
