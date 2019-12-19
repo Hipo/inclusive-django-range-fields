@@ -35,6 +35,16 @@ class AdCampaignSerializer(serializers.ModelSerializer):
         )
 ```
 
+```json
+{
+  "id": 1993,
+  "age_target": {
+    "lower": 18,
+    "upper": 30
+  }
+}
+```
+
 ## Reference
 
 ### Model Fields
