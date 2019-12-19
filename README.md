@@ -15,7 +15,7 @@ from django.db import models
 from inclusive_django_range_fields import InclusiveIntegerRangeField
 
 class AdCampaign(models.Model):
-    age_target = models.InclusiveIntegerRangeField()
+    age_target = InclusiveIntegerRangeField()
 ```
 
 ### Django Rest Framework
@@ -24,7 +24,7 @@ class AdCampaign(models.Model):
 # serializers.py
 
 from rest_framework import serializers
-from inclusive_django_range_fields.django_rest_framework.fields import InclusiveIntegerRangeField
+from inclusive_django_range_fields.drf import InclusiveIntegerRangeField
 
 class AdCampaignSerializer(serializers.ModelSerializer):
     age_target = InclusiveIntegerRangeField()
@@ -57,17 +57,17 @@ class AdCampaignSerializer(serializers.ModelSerializer):
 
 ### Ranges
 
-- `inclusive_django_range_fields.ranges.InclusiveNumericRange`
-- `inclusive_django_range_fields.ranges.InclusiveDateRange`
+- `inclusive_django_range_fields.InclusiveNumericRange`
+- `inclusive_django_range_fields.InclusiveDateRange`
 
 
 ### Django Rest Framework Serializers
 
-- `inclusive_django_range_fields.django_rest_framwork.fields.InclusiveIntegerRangeField`
-- `inclusive_django_range_fields.django_rest_framwork.fields.InclusiveDateRangeField`
+- `inclusive_django_range_fields.drf.InclusiveIntegerRangeField`
+- `inclusive_django_range_fields.drf.InclusiveDateRangeField`
 
 
 ### Form Fields
 
-- `inclusive_django_range_fields.forms.InclusiveIntegerRangeFormField`
-- `inclusive_django_range_fields.forms.InclusiveDateRangeFormField`
+- `inclusive_django_range_fields.InclusiveIntegerRangeFormField`
+- `inclusive_django_range_fields.InclusiveDateRangeFormField`

@@ -1,1 +1,4 @@
-from inclusive_django_range_fields.forms import InclusiveIntegerRangeFormField, InclusiveBigIntegerRangeField, InclusiveDateRangeFormField
+from inclusive_django_range_fields.fields import InclusiveIntegerRangeField, InclusiveBigIntegerRangeField, \
+    InclusiveDateRangeField
+from inclusive_django_range_fields.forms import InclusiveIntegerRangeFormField, InclusiveDateRangeFormField
+from inclusive_django_range_fields.ranges import InclusiveNumericRange, InclusiveDateRange
