@@ -2,6 +2,8 @@
 
 ![Inclusive](https://media.giphy.com/media/xUOwGdD7RGT4CTnUaY/giphy.gif "Inclusive")
 
+The default bound of Django range fields is `[)`. This package follows default bounds as `[]`.
+
 ## How to use?
 
 ### Django
