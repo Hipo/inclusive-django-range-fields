@@ -10,9 +10,7 @@ class BaseInclusiveRangeField(RangeField):
     precision = None
 
     def from_db_value(self, value, expression, connection):
-        if value is None:
-            return value
-        else:
+        if value is not None:
             if not value.upper_inf and not value.upper_inc and value._bounds != "[]":
                 value._upper -= self.precision
                 value._bounds = "[]"
