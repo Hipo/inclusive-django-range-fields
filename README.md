@@ -18,6 +18,10 @@ class AdCampaign(models.Model):
     age_target = InclusiveIntegerRangeField()
 ```
 
+```
+>> AdCampaign.objects.first().age_target
+>> NumericRange(18, 30, '[]')
+```
 ### Django Rest Framework
 
 ```python
