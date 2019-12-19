@@ -1,18 +1,35 @@
-from django.contrib.postgres.fields import IntegerRangeField
+from datetime import timedelta
 
-from inclusive_django_range_fields.forms import InclusiveIntegerRangeFormField
+from django.contrib.postgres.fields import RangeField, IntegerRangeField, BigIntegerRangeField, DateRangeField
+
+from inclusive_django_range_fields.forms import InclusiveIntegerRangeFormField, InclusiveDateRangeFormField
 
 
-class InclusiveIntegerRangeField(IntegerRangeField):
-    form_field = InclusiveIntegerRangeFormField
+class BaseInclusiveRangeField(RangeField):
+    form_field = None
+    precision = None
 
     def from_db_value(self, value, expression, connection):
         if value is None:
             return value
         else:
             if not value.upper_inf and not value.upper_inc and value._bounds != "[]":
-                value._upper -= 1
+                value._upper -= self.precision
                 value._bounds = "[]"
 
         return value
 
+
+class InclusiveIntegerRangeField(BaseInclusiveRangeField, IntegerRangeField):
+    form_field = InclusiveIntegerRangeFormField
+    precision = 1
+
+
+class InclusiveBigIntegerRangeField(BaseInclusiveRangeField, BigIntegerRangeField):
+    form_field = InclusiveIntegerRangeFormField
+    precision = 1
+
+
+class InclusiveDateRangeField(BaseInclusiveRangeField, DateRangeField):
+    form_field = InclusiveDateRangeFormField
+    precision = timedelta(days=1)
