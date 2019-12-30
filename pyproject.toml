@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "inclusive_django_range_fields"
-version = "0.2.0"
+version = "0.2.1"
 description = "Inclusive Django Range Fields which uses default bounds as '[]'"
 authors = ["Hipo <pypi@hipolabs.com>"]
 license = "Apache-2.0"

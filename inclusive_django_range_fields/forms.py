@@ -1,7 +1,7 @@
-from django.contrib.postgres.forms import RangeField, IntegerRangeField, DateRangeField
+from django.contrib.postgres.forms import BaseRangeField, IntegerRangeField, DateRangeField
 
 
-class BaseInclusiveRangeFormField(RangeField):
+class BaseInclusiveRangeFormField(BaseRangeField):
 
     def compress(self, values):
         values = super().compress(values)
