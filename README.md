@@ -63,6 +63,7 @@ class AdCampaignSerializer(serializers.ModelSerializer):
 
 - `inclusive_django_range_fields.InclusiveNumericRange`
 - `inclusive_django_range_fields.InclusiveDateRange`
+- `inclusive_django_range_fields.InclusiveDateTimeTZRange`
 
 
 ### Django Rest Framework Serializers
