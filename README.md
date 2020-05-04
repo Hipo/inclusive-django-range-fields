@@ -6,6 +6,8 @@ The default bound of Django range fields is `[)`. This package follows default b
 
 ## How to use?
 
+` pip install inclusive-django-range-fields`
+
 ### Django
 
 ```python
@@ -76,3 +78,7 @@ class AdCampaignSerializer(serializers.ModelSerializer):
 
 - `inclusive_django_range_fields.InclusiveIntegerRangeFormField`
 - `inclusive_django_range_fields.InclusiveDateRangeFormField`
+
+
+## PyPI
+https://pypi.org/project/inclusive-django-range-fields/
