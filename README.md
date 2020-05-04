@@ -6,7 +6,9 @@ The default bound of Django range fields is `[)`. This package follows default b
 
 ## How to use?
 
-` pip install inclusive-django-range-fields`
+```sh
+pip install inclusive-django-range-fields
+```
 
 ### Django
 
