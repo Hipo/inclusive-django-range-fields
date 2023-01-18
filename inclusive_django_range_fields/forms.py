@@ -5,7 +5,8 @@ class BaseInclusiveRangeFormField(BaseRangeField):
 
     def compress(self, values):
         values = super().compress(values)
-        values._bounds = "[]"
+        if value is not None:
+            values._bounds = "[]"
         return values
 
 
